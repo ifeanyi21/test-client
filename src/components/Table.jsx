@@ -9,6 +9,7 @@ const columns = [
     headerName: "Order Item ID",
     width: 90,
     minWidth: 120,
+    sortable: false,
   },
   {
     field: "product_id",
@@ -16,6 +17,7 @@ const columns = [
     width: 150,
     flex: 1,
     minWidth: 200,
+    sortable: false,
   },
   {
     field: "product_category",
@@ -23,31 +25,32 @@ const columns = [
     width: 150,
     flex: 1,
     minWidth: 200,
+    sortable: false,
   },
   {
     field: "price",
     headerName: "Price",
-    headerAlign:"left",
-    align:"left",
+    headerAlign: "left",
+    align: "left",
     width: 110,
     flex: 1,
     minWidth: 200,
+    sortable: true,
   },
   {
     field: "date",
     headerName: "Date",
-    description: "This column has a value getter and is not sortable.",
-    sortable: false,
+    sortable: true,
     flex: 1,
     minWidth: 200,
     width: 160,
   },
-   {
-      field: "toggle",
-      headerName: "",
-      sortable: false,
-      renderCell: (params) => <DropDown {...params} />,
-    },
+  {
+    field: "toggle",
+    headerName: "",
+    sortable: false,
+    renderCell: (params) => <DropDown {...params} />,
+  },
 ];
 
 function Table() {

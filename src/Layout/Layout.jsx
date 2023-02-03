@@ -35,7 +35,7 @@ function Layout({ children }) {
   return (
     <div>
       <NavBar />
-      {children}
+      <div className="mb-8">{children}</div>
     </div>
   );
 }
